@@ -250,12 +250,10 @@ ul {
   display: flex;
   align-items: center;
   justify-content: center;
-  /* Gradient placeholder — replace with real photo:
-     background-image: linear-gradient(rgba(20,5,5,0.65), rgba(20,5,5,0.65)), url('../images/hero-bg.jpg');
-     background-size: cover;
-     background-position: center;
-  */
-  background: linear-gradient(150deg, #1E0808 0%, #3D1515 30%, #6B2323 60%, #3A1208 100%);
+  background-image: linear-gradient(rgba(20,5,5,0.62), rgba(20,5,5,0.62)), url('../images/hero-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-color: #1E0808;
   overflow: hidden;
   text-align: center;
   padding-top: 80px;
@@ -385,4 +383,78 @@ ul {
   font-size: 0.875rem;
   color: var(--color-text-light);
   line-height: 1.65;
+}
+
+/* === Om Fatima === */
+.om-fatima {
+  padding: var(--section-padding);
+  background-color: var(--color-bg-alt);
+}
+
+.om-fatima__grid {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 4.5rem;
+  align-items: center;
+}
+
+.om-fatima__photo-wrap {
+  position: relative;
+  max-width: 380px;
+}
+
+.om-fatima__photo {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  border-radius: var(--radius);
+  box-shadow: 8px 8px 0 rgba(196, 151, 58, 0.18);
+  display: block;
+}
+
+.om-fatima__cert-badge {
+  position: absolute;
+  bottom: -1.25rem;
+  right: -1.25rem;
+  background-color: var(--color-white);
+  border: 1px solid rgba(196, 151, 58, 0.4);
+  padding: 0.75rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.1);
+}
+
+.om-fatima__cert-badge span {
+  font-size: 0.775rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+}
+
+.om-fatima__content .section-header {
+  margin-bottom: 1.5rem;
+}
+
+.om-fatima__content p {
+  color: var(--color-text-light);
+  line-height: 1.8;
+  margin-bottom: 1rem;
+  font-size: 0.975rem;
+}
+
+.om-fatima__highlights {
+  margin: 1.5rem 0 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.om-fatima__highlights li {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  font-size: 0.9rem;
+  color: var(--color-text);
 }
