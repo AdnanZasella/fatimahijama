@@ -1,0 +1,11 @@
+[build]
+  publish = "/"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# E-postnotifiering för formuläret konfigureras i Netlify dashboard:
+# Site settings → Forms → Notifications → Add notification → Email
+# Ange: kontakt@fatimahijama.se (byt mot äkta e-post)
