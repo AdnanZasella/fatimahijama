@@ -52,6 +52,24 @@
 - [ ] Netlify Forms: lägg till fatima_serghini@hotmail.com som notifikationsadress i dashboard
 - [ ] Google Business Profile: registrera och länka till hemsidan
 
+## Session 3 — UX-fixes & GitHub-deploy (2026-05-24)
+- [x] Mobilmeny: backdrop-overlay tillagd (halvtransparent, stänger menyn vid klick)
+- [x] Certbadge Om Fatima: overflow-fix på 375px (right: 0 vid ≤768px)
+- [x] Sektionsordning: FAQ flyttad före Bokning (bättre konverteringsflöde)
+- [x] Bakgrundsfärger justerade efter omordning (ivory/sand-alternering bibehållen)
+- [x] README.md skapad med full projektdokumentation
+- [x] Committad och redo för push till GitHub (AdnanZasella/fatimahijama)
+
+## Att göra för lansering
+- [ ] Kör: git push -u origin main (GitHub)
+- [ ] Koppla GitHub-repo till Netlify dashboard
+- [ ] Domän: koppla fatimahijama.se (eller vald domän) i Netlify
+- [ ] JSON-LD schema + canonical URL + sitemap.xml: uppdatera med riktig domän
+- [ ] Netlify Forms: lägg till fatima_serghini@hotmail.com som notifikationsadress
+- [ ] Google Business Profile: registrera och länka till hemsidan
+
 ## Git-historik (senaste commits)
+- 89a246a — fix: mobile backdrop, cert badge, FAQ order + README
+- 141e725 — feat: phone link i navbar + kontaktuppgifter
 - e28cb00 — Premium UX: hero animations, scroll reveal, micro-interactions, FAQ accordion, pre-CTA
 - db74f7b — Navbar: SVG logo + glass blur scroll effect
