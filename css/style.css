@@ -1001,3 +1001,164 @@ ul {
   font-size: 0.78rem;
   color: rgba(255, 255, 255, 0.35);
 }
+
+/* =====================================================
+   RESPONSIVE — Mobile-first breakpoints
+   ===================================================== */
+
+/* --- Tablet: max 1024px --- */
+@media (max-width: 1024px) {
+  :root {
+    --section-padding: 4rem 1.5rem;
+  }
+
+  .benefits-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .om-fatima__grid {
+    gap: 2.5rem;
+  }
+
+  .footer__grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+  }
+
+  .footer__brand {
+    grid-column: 1 / -1;
+  }
+}
+
+/* --- Mobile: max 768px --- */
+@media (max-width: 768px) {
+  /* Navbar */
+  .navbar__toggle {
+    display: flex;
+  }
+
+  .navbar__links {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: min(80vw, 320px);
+    height: 100vh;
+    background-color: var(--color-dark);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2.25rem;
+    transition: right 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 1001;
+    box-shadow: -4px 0 32px rgba(0, 0, 0, 0.35);
+    padding: 2rem;
+  }
+
+  .navbar__links.open {
+    right: 0;
+  }
+
+  .navbar__links a {
+    font-size: 1.05rem;
+  }
+
+  .navbar__cta-link {
+    font-size: 0.9rem !important;
+  }
+
+  /* Hero */
+  .hero__content {
+    padding: 5rem 1.25rem 4rem;
+  }
+
+  .hero__actions {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero__actions .btn {
+    width: 100%;
+    max-width: 280px;
+    text-align: center;
+  }
+
+  /* Om Fatima */
+  .om-fatima__grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .om-fatima__photo-wrap {
+    max-width: 280px;
+    margin: 0 auto;
+  }
+
+  .section-header--left {
+    text-align: center;
+  }
+
+  .section-header--left .section-subtitle {
+    margin: 0 auto;
+  }
+
+  /* Service card */
+  .service-card {
+    flex-direction: column;
+    padding: 2rem;
+    align-items: center;
+    text-align: center;
+  }
+
+  .service-card__includes {
+    grid-template-columns: 1fr;
+    text-align: left;
+  }
+
+  /* Pricing */
+  .pricing-grid {
+    grid-template-columns: 1fr;
+    max-width: 420px;
+  }
+
+  /* Form */
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  /* Footer */
+  .footer__grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .footer__brand {
+    grid-column: auto;
+  }
+}
+
+/* --- Small mobile: max 480px --- */
+@media (max-width: 480px) {
+  :root {
+    --section-padding: 3.5rem 1.25rem;
+  }
+
+  .benefits-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .om-fatima__cert-badge {
+    right: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -1.5rem;
+    white-space: nowrap;
+  }
+
+  .pricing-grid {
+    max-width: 100%;
+  }
+
+  .faq-item__question {
+    font-size: 1rem;
+  }
+}
