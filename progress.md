@@ -32,10 +32,24 @@
   - Pre-footer CTA-sektion (burgunder gradient, stark avslutning)
   - prefers-reduced-motion respekteras
 
+## Session 2 — Ändringar (2026-05-23)
+- [x] Navbar: snabbare scroll-transition (0.45s → 0.15s)
+- [x] Primärfärg: mjukare terrakotta #7A5040 (ersätter kraftig röd #7D3030)
+- [x] Tjänster + Priser: slogs ihop till en sektion (centrerat tjänstekort + 2 prisskort sida vid sida)
+- [x] Prisskort "Paket 3 sessioner": navbar-svart bakgrund (#200D0D) med gulddetaljer
+- [x] Tjänster: lagt till våt koppning (al-hijama) i beskrivning och inkluderat-lista
+- [x] Tjänster: notering om att Fatima erbjuder behandling enbart till kvinnor
+- [x] Riktiga kontaktuppgifter inlagda:
+  - E-post: fatima_serghini@hotmail.com (schema + footer)
+  - Telefon: 073-655 32 60 (navbar outline-knapp + footer)
+- [x] Navbar: telefonnummer som separat outline-knapp bredvid "Boka nu"
+- [x] Hero eyebrow-text: reducerad letter-spacing på mobil (passar en rad)
+- [x] Om Fatima cert-badge: fixad bugg på mobil (satt inuti bilden, ej utanför)
+
 ## Placeholders kvar att ersätta
-- [ ] E-post: sätt Fatimas riktiga e-post i Netlify dashboard (Site → Forms → Notifications)
 - [ ] Domän: koppla fatimahijama.se (eller vald domän) i Netlify
 - [ ] JSON-LD schema + canonical URL + sitemap.xml: uppdatera med riktig domän
+- [ ] Netlify Forms: lägg till fatima_serghini@hotmail.com som notifikationsadress i dashboard
 - [ ] Google Business Profile: registrera och länka till hemsidan
 
 ## Git-historik (senaste commits)

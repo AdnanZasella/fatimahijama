@@ -3,6 +3,7 @@
 const navbar = document.getElementById('navbar');
 const navToggle = document.getElementById('navToggle');
 const navLinks = document.getElementById('navLinks');
+const navBackdrop = document.getElementById('navBackdrop');
 const bokningForm = document.getElementById('bokningForm');
 const formSuccess = document.getElementById('formSuccess');
 
@@ -15,6 +16,7 @@ window.addEventListener('scroll', () => {
 navToggle.addEventListener('click', () => {
   const isOpen = navLinks.classList.toggle('open');
   navToggle.setAttribute('aria-expanded', String(isOpen));
+  navBackdrop.classList.toggle('open', isOpen);
 
   const [top, mid, bot] = navToggle.querySelectorAll('span');
   if (isOpen) {
@@ -28,14 +30,16 @@ navToggle.addEventListener('click', () => {
   }
 });
 
-// Close mobile nav when any link is clicked
+// Close mobile nav when any link is clicked or backdrop is tapped
 navLinks.querySelectorAll('a').forEach(link => {
   link.addEventListener('click', closeNav);
 });
+navBackdrop.addEventListener('click', closeNav);
 
 function closeNav() {
   navLinks.classList.remove('open');
   navToggle.setAttribute('aria-expanded', 'false');
+  navBackdrop.classList.remove('open');
   const [top, mid, bot] = navToggle.querySelectorAll('span');
   top.style.transform = '';
   mid.style.opacity = '';

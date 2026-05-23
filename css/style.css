@@ -296,6 +296,23 @@ ul {
   border-radius: 2px;
 }
 
+/* Mobile nav backdrop */
+.nav-backdrop {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.55);
+  z-index: 999;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nav-backdrop.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
 /* === Hero === */
 .hero {
   min-height: 100vh;
@@ -774,7 +791,7 @@ ul {
 /* === Bokning === */
 .bokning {
   padding: var(--section-padding);
-  background-color: var(--color-bg-alt);
+  background-color: var(--color-bg);
 }
 
 .booking-form {
@@ -904,7 +921,7 @@ ul {
 /* === FAQ === */
 .faq {
   padding: var(--section-padding);
-  background-color: var(--color-bg);
+  background-color: var(--color-bg-alt);
 }
 
 .faq-list {
@@ -1101,6 +1118,10 @@ ul {
     display: flex;
   }
 
+  .nav-backdrop {
+    display: block;
+  }
+
   .navbar__links {
     position: fixed;
     top: 0;
@@ -1155,6 +1176,11 @@ ul {
   .om-fatima__photo-wrap {
     max-width: 280px;
     margin: 0 auto;
+  }
+
+  .om-fatima__cert-badge {
+    right: 0;
+    bottom: -1rem;
   }
 
   .section-header--left {
