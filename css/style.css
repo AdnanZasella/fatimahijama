@@ -1,0 +1,155 @@
+/* === Custom Properties === */
+:root {
+  --color-primary: #7D3030;
+  --color-primary-dark: #5C2020;
+  --color-gold: #C4973A;
+  --color-gold-light: #D4A84A;
+  --color-bg: #F8F4EE;
+  --color-bg-alt: #EDE8DE;
+  --color-text: #2A2A2A;
+  --color-text-light: #6B6B6B;
+  --color-white: #FFFFFF;
+  --color-dark: #1A1A1A;
+
+  --font-serif: 'Cormorant Garamond', Georgia, serif;
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+
+  --container-max: 1180px;
+  --section-padding: 5rem 1.5rem;
+  --transition: 0.3s ease;
+  --radius: 2px;
+}
+
+/* === Reset === */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--font-sans);
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+/* === Utilities === */
+.container {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.section-header h2 {
+  font-family: var(--font-serif);
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 600;
+  color: var(--color-primary);
+  margin-bottom: 0.75rem;
+}
+
+.section-header--left {
+  text-align: left;
+}
+
+.section-header--left .section-subtitle {
+  margin-left: 0;
+}
+
+.section-subtitle {
+  font-size: 1.05rem;
+  color: var(--color-text-light);
+  max-width: 540px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+/* === Buttons === */
+.btn {
+  display: inline-block;
+  padding: 0.875rem 2rem;
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: all var(--transition);
+  border-radius: var(--radius);
+}
+
+.btn--gold {
+  background-color: var(--color-gold);
+  border-color: var(--color-gold);
+  color: var(--color-primary-dark);
+}
+
+.btn--gold:hover {
+  background-color: var(--color-gold-light);
+  border-color: var(--color-gold-light);
+  transform: translateY(-1px);
+}
+
+.btn--dark {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+.btn--dark:hover {
+  background-color: var(--color-primary-dark);
+  border-color: var(--color-primary-dark);
+  transform: translateY(-1px);
+}
+
+.btn--outline-light {
+  background-color: transparent;
+  border-color: rgba(255, 255, 255, 0.6);
+  color: var(--color-white);
+}
+
+.btn--outline-light:hover {
+  border-color: var(--color-white);
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+/* === Moroccan Divider (shared) === */
+.moroccan-divider {
+  max-width: 360px;
+  margin: 3.5rem auto 0;
+  opacity: 0.75;
+}
+
+.moroccan-divider svg {
+  width: 100%;
+  display: block;
+}
