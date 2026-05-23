@@ -446,7 +446,7 @@
           <p class="section-subtitle">Fyll i formuläret — Fatima återkommer inom 24 timmar för att bekräfta din tid</p>
         </div>
 
-        <form class="booking-form" name="bokning" method="POST" data-netlify="true" netlify-honeypot="bot-field" novalidate id="bokningForm">
+        <form class="booking-form" name="bokning" method="POST" netlify netlify-honeypot="bot-field" novalidate id="bokningForm">
           <input type="hidden" name="form-name" value="bokning">
           <p class="booking-form__honeypot" aria-hidden="true">
             <label>Lämna tomt: <input name="bot-field" tabindex="-1" autocomplete="off"></label>
@@ -495,11 +495,30 @@
           <button type="submit" class="booking-form__submit">Skicka bokningsförfrågan</button>
 
           <div class="booking-form__success" id="formSuccess" aria-live="polite" hidden>
-            <svg width="44" height="44" viewBox="0 0 44 44" fill="none" aria-hidden="true">
-              <circle cx="22" cy="22" r="20" stroke="#C4973A" stroke-width="1.5"/>
-              <path d="M13 22l7 7 11-13" stroke="#C4973A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-            <p>Tack för din bokningsförfrågan! Fatima återkommer till dig inom 24 timmar för att bekräfta din tid.</p>
+            <div class="success__icon-wrap" aria-hidden="true">
+              <svg class="success__circle" width="72" height="72" viewBox="0 0 72 72" fill="none">
+                <circle cx="36" cy="36" r="34" stroke="#C4973A" stroke-width="1.5" stroke-dasharray="213" stroke-dashoffset="213" class="success__ring"/>
+                <path d="M22 36l10 10 18-20" stroke="#C4973A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="45" stroke-dashoffset="45" class="success__check"/>
+              </svg>
+            </div>
+            <p class="success__eyebrow">Bokningsförfrågan mottagen</p>
+            <h3 class="success__title">Tack, vi hör av oss snart!</h3>
+            <p class="success__text">Fatima har tagit emot din förfrågan och återkommer till dig inom <strong>24 timmar</strong> för att bekräfta din tid och svara på eventuella frågor.</p>
+            <div class="success__steps">
+              <div class="success__step">
+                <span class="success__step-num">1</span>
+                <p>Du får en bekräftelse via telefon eller e-post</p>
+              </div>
+              <div class="success__step">
+                <span class="success__step-num">2</span>
+                <p>Fatima reser hem till dig på överenskommen tid</p>
+              </div>
+              <div class="success__step">
+                <span class="success__step-num">3</span>
+                <p>Njut av din terapeutiska hijama-behandling</p>
+              </div>
+            </div>
+            <p class="success__contact">Har du brådskande frågor? Ring direkt på <a href="tel:+46736553260">073-655 32 60</a></p>
           </div>
         </form>
       </div>
