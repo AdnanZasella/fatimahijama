@@ -706,3 +706,133 @@ ul {
   margin: 0 auto;
   line-height: 1.65;
 }
+
+/* === Bokning === */
+.bokning {
+  padding: var(--section-padding);
+  background-color: var(--color-bg-alt);
+}
+
+.booking-form {
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.booking-form__honeypot {
+  display: none;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  margin-bottom: 1.125rem;
+}
+
+.form-group label {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--color-text);
+  letter-spacing: 0.01em;
+}
+
+.form-required {
+  color: var(--color-primary);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  color: var(--color-text);
+  background-color: var(--color-white);
+  border: 1.5px solid #D2C9BE;
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius);
+  transition: border-color var(--transition), box-shadow var(--transition);
+  outline: none;
+  width: 100%;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+.form-group select {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%236B6B6B' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  padding-right: 2.5rem;
+  cursor: pointer;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #ADA49A;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: var(--color-gold);
+  box-shadow: 0 0 0 3px rgba(196, 151, 58, 0.12);
+}
+
+.form-group input.is-error,
+.form-group select.is-error,
+.form-group textarea.is-error {
+  border-color: var(--color-primary);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 120px;
+  line-height: 1.6;
+}
+
+.booking-form__submit {
+  width: 100%;
+  padding: 1rem 2rem;
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  border: 2px solid var(--color-primary);
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: all var(--transition);
+  margin-top: 0.5rem;
+}
+
+.booking-form__submit:hover {
+  background-color: var(--color-primary-dark);
+  border-color: var(--color-primary-dark);
+}
+
+.booking-form__submit:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+.booking-form__success {
+  text-align: center;
+  padding: 2.5rem 2rem;
+  background-color: var(--color-white);
+  border: 1px solid rgba(196, 151, 58, 0.3);
+  margin-top: 1.5rem;
+}
+
+.booking-form__success p {
+  color: var(--color-text);
+  margin-top: 1rem;
+  line-height: 1.75;
+  font-size: 1.025rem;
+}

@@ -337,7 +337,69 @@
     </section>
 
     <section class="bokning" id="bokning">
-      <!-- Task 12 -->
+      <div class="container">
+        <div class="section-header">
+          <h2>Boka din behandling</h2>
+          <p class="section-subtitle">Fyll i formuläret — Fatima återkommer inom 24 timmar för att bekräfta din tid</p>
+        </div>
+
+        <form class="booking-form" name="bokning" method="POST" data-netlify="true" netlify-honeypot="bot-field" novalidate id="bokningForm">
+          <input type="hidden" name="form-name" value="bokning">
+          <p class="booking-form__honeypot" aria-hidden="true">
+            <label>Lämna tomt: <input name="bot-field" tabindex="-1" autocomplete="off"></label>
+          </p>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="fornamn">Förnamn <span class="form-required" aria-hidden="true">*</span></label>
+              <input type="text" id="fornamn" name="fornamn" required autocomplete="given-name" placeholder="Anna">
+            </div>
+            <div class="form-group">
+              <label for="efternamn">Efternamn <span class="form-required" aria-hidden="true">*</span></label>
+              <input type="text" id="efternamn" name="efternamn" required autocomplete="family-name" placeholder="Andersson">
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="telefon">Telefonnummer <span class="form-required" aria-hidden="true">*</span></label>
+              <input type="tel" id="telefon" name="telefon" required autocomplete="tel" placeholder="070-000 00 00">
+            </div>
+            <div class="form-group">
+              <label for="epost">E-postadress <span class="form-required" aria-hidden="true">*</span></label>
+              <input type="email" id="epost" name="epost" required autocomplete="email" placeholder="anna@exempel.se">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="tjanst">Tjänst</label>
+            <select id="tjanst" name="tjanst">
+              <option value="Enskild session - 650 kr">Enskild session — 650 kr</option>
+              <option value="Paket 3 sessioner - 1750 kr">Paket 3 sessioner — 1 750 kr</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="onsketid">Önskad tid</label>
+            <input type="text" id="onsketid" name="onsketid" placeholder="T.ex. vardagar eftermiddag, helger, eller ett specifikt datum">
+          </div>
+
+          <div class="form-group">
+            <label for="meddelande">Meddelande eller frågor</label>
+            <textarea id="meddelande" name="meddelande" rows="4" placeholder="Berätta gärna om dina besvär eller om du har några frågor inför behandlingen..."></textarea>
+          </div>
+
+          <button type="submit" class="booking-form__submit">Skicka bokningsförfrågan</button>
+
+          <div class="booking-form__success" id="formSuccess" aria-live="polite" hidden>
+            <svg width="44" height="44" viewBox="0 0 44 44" fill="none" aria-hidden="true">
+              <circle cx="22" cy="22" r="20" stroke="#C4973A" stroke-width="1.5"/>
+              <path d="M13 22l7 7 11-13" stroke="#C4973A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <p>Tack för din bokningsförfrågan! Fatima återkommer till dig inom 24 timmar för att bekräfta din tid.</p>
+          </div>
+        </form>
+      </div>
     </section>
 
     <section class="faq" id="faq">
