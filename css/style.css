@@ -254,6 +254,27 @@ ul {
   color: var(--color-primary-dark) !important;
 }
 
+.navbar__phone-link {
+  display: flex !important;
+  align-items: center;
+  gap: 0.4rem;
+  border: 1.5px solid rgba(196, 151, 58, 0.45) !important;
+  color: rgba(255, 255, 255, 0.8) !important;
+  padding: 0.45rem 0.9rem !important;
+  border-radius: var(--radius);
+  font-size: 0.78rem !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.04em !important;
+  margin-left: 0.25rem;
+  white-space: nowrap;
+  transition: border-color 0.3s ease, color 0.3s ease !important;
+}
+
+.navbar__phone-link:hover {
+  border-color: var(--color-gold) !important;
+  color: var(--color-gold) !important;
+}
+
 .navbar__toggle {
   display: none;
   flex-direction: column;
@@ -1180,6 +1201,14 @@ ul {
   }
 }
 
+/* --- Hero eyebrow: tighter spacing on mobile so it fits on one line --- */
+@media (max-width: 540px) {
+  .hero__eyebrow {
+    letter-spacing: 0.08em;
+    font-size: 0.7rem;
+  }
+}
+
 /* --- Small mobile: max 480px --- */
 @media (max-width: 480px) {
   :root {
@@ -1191,10 +1220,10 @@ ul {
   }
 
   .om-fatima__cert-badge {
-    right: 0;
+    right: auto;
     left: 50%;
     transform: translateX(-50%);
-    bottom: -1.5rem;
+    bottom: 1rem;
     white-space: nowrap;
   }
 
