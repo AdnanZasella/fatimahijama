@@ -102,3 +102,35 @@ if (bokningForm && formSuccess) {
     field.addEventListener('input', () => field.classList.remove('is-error'));
   });
 }
+
+// --- Scroll reveal: IntersectionObserver for [data-reveal] elements ---
+const revealObserver = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('is-visible');
+      revealObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.12 });
+
+document.querySelectorAll('[data-reveal]').forEach(el => revealObserver.observe(el));
+
+// --- FAQ: smooth animated accordion ---
+document.querySelectorAll('.faq-item').forEach(details => {
+  const summary = details.querySelector('.faq-item__question');
+  const answer = details.querySelector('.faq-item__answer');
+
+  summary.addEventListener('click', e => {
+    e.preventDefault();
+
+    if (details.open) {
+      details.classList.add('is-closing');
+      answer.addEventListener('transitionend', () => {
+        details.removeAttribute('open');
+        details.classList.remove('is-closing');
+      }, { once: true });
+    } else {
+      details.setAttribute('open', '');
+    }
+  });
+});
